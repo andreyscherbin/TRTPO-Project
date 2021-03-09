@@ -6,7 +6,8 @@
 1.1 [Назначение](#appointment)  
 1.2 [Соглашения, принятые в документах](#definitions_acronyms_and_abbreviations)    
 1.3 [Границы проекта](#project_boundary)   
-1.4 [Ссылки](#references)  
+1.4 [Ссылки](#references)   
+2 [Общий взгляд на продукт](#overall_description)  
 
 <a name="intro"/>
 
@@ -28,6 +29,13 @@
 
 ## 1.3 Границы проекта
 Веб-форум позволит общаться пользователям на различные темы через Интернет используя браузер.
+
 <a name="references"/>
 
 ## 1.4 Ссылки
+
+<a name="overall_description"/>
+
+# 2 Общий взгляд на продукт
+
+

@@ -78,17 +78,17 @@
 
 ## 2.2 Интерфейс пользователя
 Окно входа в приложение.  
-![Окно входа в приложение](https://github.com/andreyscherbin/TRTPO-Project/blob/main/Images/System%20Design/SignIn.PNG)  
+![Окно входа в приложение](https://github.com/andreyscherbin/TRTPO-Project/blob/main/Images/Mockups/SignIn.PNG)  
 Окно регистрации нового пользователя.  
-![Окно регистрации нового пользователя](https://github.com/andreyscherbin/TRTPO-Project/blob/main/Images/System%20Design/Registration.PNG)  
+![Окно регистрации нового пользователя](https://github.com/andreyscherbin/TRTPO-Project/blob/main/Images/Mockups/Registration.PNG)  
 Главное окно приложения.  
-![Главное окно приложения](https://github.com/andreyscherbin/TRTPO-Project/blob/main/Images/System%20Design/Main.PNG)  
+![Главное окно приложения](https://github.com/andreyscherbin/TRTPO-Project/blob/main/Images/Mockups/Main.PNG)  
 Окно профиля пользователя.  
-![Окно профиля пользователя](https://github.com/andreyscherbin/TRTPO-Project/blob/main/Images/System%20Design/Profile.PNG)
+![Окно профиля пользователя](https://github.com/andreyscherbin/TRTPO-Project/blob/main/Images/Mockups/Profile.PNG)
 Окно создания темы.  
-![Окно создания темы](https://github.com/andreyscherbin/TRTPO-Project/blob/main/Images/System%20Design/CreateThread.PNG)  
+![Окно создания темы](https://github.com/andreyscherbin/TRTPO-Project/blob/main/Images/Mockups/CreateThread.PNG)  
 Окно создания поста.  
-![Окно создания поста](https://github.com/andreyscherbin/TRTPO-Project/blob/main/Images/System%20Design/Post%20Image.PNG)
+![Окно создания поста](https://github.com/andreyscherbin/TRTPO-Project/blob/main/Images/Mockups/Post%20Image.PNG)
 
 <a name="user_specifications"/>
 

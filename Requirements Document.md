@@ -6,8 +6,13 @@
 1.1 [Назначение](#appointment)  
 1.2 [Соглашения, принятые в документах](#definitions_acronyms_and_abbreviations)    
 1.3 [Границы проекта](#project_boundary)   
-1.4 [Ссылки](#references)   
-2 [Общий взгляд на продукт](#overall_description)  
+1.4 [Ссылки](#references)  
+2 [Общее описание](#overall_view)  
+2.1 [Общий взгляд на продукт](#overall_view_on_product)  
+2.2 [Классы и характеристики пользователей](#users)   
+2.3 [Операционная среда](#os)   
+2.4 [Ограничения дизайна и реализации](#design_constraints)   
+2.5 [Предположения и зависимости](#assumptions_and_dependencies)    
 
 <a name="intro"/>
 
@@ -34,8 +39,28 @@
 
 ## 1.4 Ссылки
 
-<a name="overall_description"/>
+<a name="overall_view"/>
 
-# 2 Общий взгляд на продукт
+# 2 Общее описание
+
+<a name="overall_view_on_product"/>
+
+## 2.1 Общий взгляд на продукт
 ![Контекстная диаграмма](https://github.com/andreyscherbin/TRTPO-Project/blob/main/Images/System%20Design/ContextDiagramm.PNG)
+
+<a name="users"/>
+
+## 2.2 Классы и характеристики пользователей 
+
+<a name="os"/>
+
+## 2.3 Операционная среда
+
+<a name="design_constraints"/>
+
+## 2.4 Ограничения дизайна и реализации
+
+<a name="assumptions_and_dependencies"/>
+
+## 2.5 Предположения и зависимости
 

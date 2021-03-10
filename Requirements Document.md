@@ -82,7 +82,7 @@
 Окно регистрации нового пользователя.  
 ![Окно регистрации нового пользователя](https://github.com/andreyscherbin/TRTPO-Project/blob/main/Images/System%20Design/Registration.PNG)  
 Главное окно приложения.  
-![Главное окно приложения](../../Images/Mockups/MainWindow1.PNG)  
+![Главное окно приложения](https://github.com/andreyscherbin/TRTPO-Project/blob/main/Images/System%20Design/Main.PNG)  
 Окно профиля пользователя.  
 ![Окно профиля пользователя](../../Images/Mockups/SettingUpAUserProfile.PNG)
 Окно создания темы.  

@@ -37,5 +37,5 @@
 <a name="overall_description"/>
 
 # 2 Общий взгляд на продукт
-
+![Контекстная диаграмма](https://github.com/andreyscherbin/TRTPO-Project/blob/main/Images/System%20Design/ContextDiagramm.PNG)
 

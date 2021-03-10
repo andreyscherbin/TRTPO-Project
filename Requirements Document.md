@@ -84,7 +84,7 @@
 Главное окно приложения.  
 ![Главное окно приложения](https://github.com/andreyscherbin/TRTPO-Project/blob/main/Images/System%20Design/Main.PNG)  
 Окно профиля пользователя.  
-![Окно профиля пользователя](../../Images/Mockups/SettingUpAUserProfile.PNG)
+![Окно профиля пользователя](https://github.com/andreyscherbin/TRTPO-Project/blob/main/Images/System%20Design/Profile.PNG)
 Окно создания темы.  
 ![Окно создания темы](https://github.com/andreyscherbin/TRTPO-Project/blob/main/Images/System%20Design/CreateThread.PNG)
 

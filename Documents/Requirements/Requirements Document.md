@@ -19,19 +19,21 @@
 3 [Системные требования](#system_requirements)  
 3.1 [Функциональные требования](#functional_requirements)  
 3.1.1 [Основные функции](#main_functions)  
-3.1.1.1 [Вход пользователя в приложение](#user_logon_to_the_application)  
-3.1.1.2 [Настройка профиля активного пользователя](#setting_up_the_profile_of_the_active_user)  
-3.1.1.3 [Загрузка новостей](#download_news)  
-3.1.1.4 [Просмотр информации об отдельной новости](#view_information_about_an_individual_newsletter)  
-3.1.1.5 [Выход пользователя из учётной записи](#active_user_change)  
-3.1.1.6 [Регистрация нового пользователя после входа в приложение](#add_new_user)  
-3.1.2 [Ограничения и исключения](#restrictions_and_exclusions)  
-3.2 [Нефункциональные требования](#non-functional_requirements)  
-3.2.1 [Атрибуты качества](#quality_attributes)  
-3.2.1.1 [Требования к удобству использования](#requirements_for_ease_of_use)  
-3.2.1.2 [Требования к безопасности](#security_requirements)  
-3.2.2 [Внешние интерфейсы](#external_interfaces)  
-3.2.3 [Ограничения](#restrictions)  
+3.1.1.1 [Регистрация нового пользователя](#add_new_user)
+3.1.1.2 [Вход в систему](#sign_in)  
+3.1.1.3 [Просмотр](#view)  
+3.1.1.4 [Поиск](#search)  
+3.1.1.5 [Общение](#communication)  
+3.1.1.6 [Управление контентом](#control_content)  
+3.1.1.7 [Управление пользователями](#control_users)
+3.1.1.8 [Управление форумом](#control_forum)
+5.1.2 [Ограничения и исключения](#restrictions_and_exclusions)  
+6.2 [Нефункциональные требования](#non-functional_requirements)  
+7.2.1 [Атрибуты качества](#quality_attributes)  
+8.2.1.1 [Требования к удобству использования](#requirements_for_ease_of_use)  
+9.2.1.2 [Требования к безопасности](#security_requirements)  
+10.2.2 [Внешние интерфейсы](#external_interfaces)  
+11.2.3 [Ограничения](#restrictions)  
 
 <a name="intro"/>
 
@@ -202,7 +204,7 @@
 
 <a name="control_forum"/>
 
-#### 3.1.1.7 Управление форумом
+#### 3.1.1.8 Управление форумом
 **Описание.** Администратор имеет возможность управлять форумом.
 
 | Функция | Требования | 
@@ -219,7 +221,7 @@
 <a name="restrictions_and_exclusions"/>
 
 ### 3.1.2 Ограничения и исключения
-1. Приложение работает только при наличии подключения к Интернету;
+1. Система работает только при наличии подключения к Интернету;
 
 <a name="non-functional_requirements"/>
 

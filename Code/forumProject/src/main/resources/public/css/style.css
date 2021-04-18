@@ -1,0 +1,27 @@
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+footer {
+	flex: 1 0 auto;
+}
+
+nav {
+	font-weight: 300;
+}
+
+body>.container {
+	padding-top: 50px;
+	min-height: 75vh;
+}
+.bold {
+	font-weight: bold;
+}
+
+[type="radio"]:not(:checked), [type="radio"]:checked {   
+    position: relative;
+    opacity: 1.0;
+    pointer-events: auto
+}

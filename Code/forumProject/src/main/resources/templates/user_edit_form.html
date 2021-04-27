@@ -1,0 +1,206 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head">
+</head>
+<body>
+    <nav th:replace="fragments/navbar :: navbar"></nav>
+    <div class="container">
+        <div th:replace="fragments/messages :: messages"></div>
+
+        <div class="row">
+            <div class="row">
+
+                <!-- LEFT -->
+
+                <div class="col s2">
+                    <div class="row">
+                        <div class="col s12">
+                            <img th:src="@{/resources/img/pp/} + ${userProfile.user.idProfilePicture} + '.jpg'" class="responsive-img z-depth-2" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 right-align">
+                            <h6 th:text="'@' + ${userProfile.user.username}"></h6>
+                            <h6 th:text="${userProfile.user.name}" class="bold"></h6>
+                            <h6 th:text="${userProfile.user.lastName}" class="bold"></h6>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- MID -->
+
+                <div class="col s8 ">
+
+                    <!-- PROFILE EDIT FORM -->
+
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="row z-depth-2">
+                                <div class="row">
+                                    <div class="col s12">
+                                        <h5 class="center bold">EDIT YOUR PROFILE</h5>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s12">
+
+                                        <!-- EDIT PROFILE PIC -->
+
+                                        <form th:object="${userEditForm}" name="f"
+                                            th:action="@{/myprofile/edit/picture?} +  ${_csrf.parameterName} + '=' + ${_csrf.token}" method="POST"
+                                            enctype="multipart/form-data" class="row">
+                                            <div class="col s2">
+                                                <div class="row"></div>
+                                            </div>
+                                            <div class="col s8">
+
+                                                <!-- PROFILE PICTURE  -->
+
+                                                <div class="row">
+                                                    <div class="file-field input-field col s12">
+                                                        <div class="btn">
+                                                            <span>File</span>
+                                                            <input name="profilePicture" type="file" accept="image/jpeg,image/png" />
+                                                        </div>
+                                                        <div class="file-path-wrapper">
+                                                            <input class="file-path validate" type="text" placeholder="Upload your profile picture" />
+                                                        </div>
+                                                        <!-- p th:if="${#fields.hasErrors('profilePicture')}" th:errors="${profilePicture}" class="red-text">error</p -->
+                                                    </div>
+                                                </div>
+
+                                                <!-- SUBMIT BUTTON -->
+
+                                                <div class="row">
+                                                    <div class="input-field col s12">
+                                                        <button class="btn waves-effect waves-light" type="submit" name="action">Save Profile Picture</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                        <!-- EDIT INFO -->
+
+                                        <form th:object="${userEditForm}" name="f" th:action="@{/myprofile/edit}" method="POST" class="row">
+                                            <div class="col s2">
+                                                <div class="row"></div>
+                                            </div>
+                                            <div class="col s8">
+                                                <!-- NAME -->
+                                                <div class="row">
+                                                    <div class="input-field col s12">
+                                                        <input name="name" th:value="${userProfile.user.name}" id="name" type="text" length="50" />
+                                                        <label for="name">Name</label>
+                                                        <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="red-text">error</p>
+                                                    </div>
+                                                </div>
+                                                <!-- LAST NAME -->
+                                                <div class="row">
+                                                    <div class="input-field col s12">
+                                                        <input name="lastName" th:value="${userProfile.user.LastName}" id="lastName" type="text" length="50"/>
+                                                        <label for="lastName">Last name</label>
+                                                        <p th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" class="red-text">error</p>
+                                                    </div>
+                                                </div>
+
+                                                <!-- SEX -->
+                                                <div class="row">
+                                                    <div class="col s12">
+                                                        <p>
+                                                            <input name="sex" value="M" type="radio" id="male" th:checked="${userProfile.user.sex=='M'}"/>
+                                                            <label for="male">Male</label>
+                                                        </p>
+                                                        <p>
+                                                            <input name="sex" value="F" type="radio" id="female" th:checked="${userProfile.user.sex=='F'}"/>
+                                                            <label for="female">Female</label>
+                                                        </p>
+                                                        <p>
+                                                            <input name="sex" value="N" type="radio" id="null" th:checked="${userProfile.user.sex=='N'}"/>
+                                                            <label for="null">I do not know</label>
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <!-- CITY -->
+                                                <div class="row">
+                                                    <div class="input-field col s12">
+                                                        <input name="city" th:value="${userProfile.user.city}" id="city" type="text" />
+                                                        <label for="city">City</label>
+                                                        <p th:if="${#fields.hasErrors('city')}" th:errors="*{city}" class="red-text">error</p>
+                                                    </div>
+                                                </div>
+
+                                                <!-- BIRTHDAY -->
+                                                <div class="row">
+                                                    <div class="input-field col s12">
+                                                        <input name="birthday" type="date"
+                                                            th:value="${userProfile.user.birthday} ? ${#calendars.format(userProfile.user.birthday, 'yyyy-mm-dd')}" class="datepicker"
+                                                            id="birthday" />
+                                                        <label for="birthday">Birthday</label>
+                                                        <p th:if="${#fields.hasErrors('birthday')}" th:errors="*{birthday}" class="red-text">error</p>
+                                                    </div>
+                                                </div>
+
+                                                <!-- FOOTER -->
+                                                <div class="row">
+                                                    <div class="input-field col s12">
+                                                        <input name="footer" th:value="${userProfile.user.footer}" id="footer" type="text" length="50" />
+                                                        <label for="footer">Footer</label>
+                                                        <p th:if="${#fields.hasErrors('footer')}" th:errors="*{footer}" class="red-text">error</p>
+                                                    </div>
+                                                </div>
+                                                <!-- BIOGRAPHY -->
+                                                <div class="row">
+                                                    <div class="input-field col s12">
+                                                        <textarea name="biography" th:text="${userProfile.user.biography}" id="biography"
+                                                            class="materialize-textarea"></textarea>
+                                                        <label for="biography">Biography</label>
+                                                        <p th:if="${#fields.hasErrors('biography')}" th:errors="*{biography}" class="red-text">error</p>
+                                                    </div>
+                                                </div>
+                                                <!-- SUBMIT BUTTON -->
+                                                <div class="row">
+                                                    <div class="input-field col s12">
+                                                        <button class="btn waves-effect waves-light" type="submit" name="action">
+                                                            Save <i class="material-icons right">send</i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s2">
+                    <div class="row">
+                        <div class="col s11 right center-align">
+                            <span>Delete account</span>
+                            <a th:href="@{/myprofile/delete}" class="btn waves-effect waves-light red white-text">Delete account</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+					$(document).ready(function() {
+						$('select').material_select();
+					});
+
+					$('.datepicker').pickadate({
+						format : 'yyyy-mm-dd',
+						formatSubmit : 'yyyy-mm-dd',
+						selectMonths : true,
+						selectYears : 200,
+						min : [ 1900, 1, 1 ],
+						max : true
+					});
+				</script>
+</body>
+</html>

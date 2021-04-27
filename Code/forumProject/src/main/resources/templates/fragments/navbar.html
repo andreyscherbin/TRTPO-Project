@@ -1,0 +1,31 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+
+<head>
+</head>
+
+
+<body>
+    <nav th:fragment="navbar" class="nav-wrapper amber darken-4">
+        <a th:href=" @{~/}" class="brand-logo" style="margin-left: 10px;"> Forum</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+            <li sec:authorize="!isAuthenticated()"><a href="#modal-user-login" class="modal-trigger">Sign up</a></li>
+            <li sec:authorize="!isAuthenticated()"><a href="#modal-user-create" class="modal-trigger">Sign in</a></li>
+
+            <li sec:authorize="hasAuthority('ADMIN')"><a th:href="@{/users}">Users</a></li>
+            <li sec:authorize="isAuthenticated()"><a th:href="@{/topic/new}">New topic</a></li>
+            <li sec:authorize="isAuthenticated()"><a th:href="@{/myprofile}">My Profile</a></li>
+            <li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
+        </ul>
+
+
+        <div th:replace="fragments/user_form :: modal_user_login_form"></div>
+        <div th:replace="fragments/create_user_modal_form :: create_user_modal_form"></div>
+        <script type="text/javascript" th:src="@{/resources/js/signin-signup-modal.js}"></script>
+    </nav>
+</body>
+</html>

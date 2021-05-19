@@ -1,7 +1,3 @@
-# **Project Forum**
-Simple forum created using Spring Framework and Thymeleaf.
-Example of simple CRUD web application. 
-
 
 ## Current functions
 ### For everyone: 
@@ -23,8 +19,6 @@ Example of simple CRUD web application.
 - Displaying list of all users at [/users](http://localhost:8080/forum//users)
 
 ## Configuration
-Example application properties are in the `application.example.properties` file.
-Befroe build Forum or run tests you have to create `application.properties` files.
 
 ```properties
 ## Database connection ##

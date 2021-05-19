@@ -86,5 +86,10 @@ public class PostServiceImpl implements PostService {
         post.setContent(content);
         save(post);
     }
+
+	@Override
+	public boolean deleteByTopic(Topic topic) {
+		 return postRepository.deleteByTopic(topic);
+	}
     
 }

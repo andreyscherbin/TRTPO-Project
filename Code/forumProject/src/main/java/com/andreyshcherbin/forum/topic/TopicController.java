@@ -114,7 +114,7 @@ public class TopicController {
             return "redirect:/topic/" + id;
         }
         
-        topicService.delete(topic);
+        topicService.delete(topic);       
         
         model.addFlashAttribute("message", "topic.successfully.deleted");
         return "redirect:/section/" + topic.getSection().getId();

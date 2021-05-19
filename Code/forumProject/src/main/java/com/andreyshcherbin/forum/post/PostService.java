@@ -25,6 +25,8 @@ public interface PostService {
     
     Set<Post> findByTopic(Topic topic);
     
+    boolean deleteByTopic(Topic topic);
+    
     void save(Post post);
     
     void delete(int id);

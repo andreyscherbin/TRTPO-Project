@@ -25,3 +25,11 @@ body>.container {
     opacity: 1.0;
     pointer-events: auto
 }
+
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {   
+    position: relative;
+    opacity: 1.0;
+    pointer-events: auto
+}
+
+

@@ -6,7 +6,6 @@ import com.andreyshcherbin.forum.user.User;
 
 import java.io.Serializable;
 import java.util.Date;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -27,15 +26,15 @@ public class Topic implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn
     private User user;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn
     private Section section;
 
-    @Column(length = 50)
+    @Column(length = 255)
     private String title;
 
     @Column(columnDefinition = "TEXT")
